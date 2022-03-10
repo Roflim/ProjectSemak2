@@ -1,0 +1,18 @@
+﻿  main.c
+C:\Users\Dimochka\Desktop\Project\0_CountLaunches_0.5\main.c(19,30): warning C4047: функция: "DWORD" отличается по уровням косвенного обращения от "void *"
+C:\Users\Dimochka\Desktop\Project\0_CountLaunches_0.5\main.c(19,26): warning C4024: RegSetValueExW: различные типы для формального и фактического параметров 3
+C:\Users\Dimochka\Desktop\Project\0_CountLaunches_0.5\main.c(19,44): warning C4133: функция: несовместимые типы - из "unsigned short [2]" в "const BYTE *"
+C:\Users\Dimochka\Desktop\Project\0_CountLaunches_0.5\main.c(31,41): warning C4047: функция: "DWORD" отличается по уровням косвенного обращения от "void *"
+C:\Users\Dimochka\Desktop\Project\0_CountLaunches_0.5\main.c(31,37): warning C4024: RegOpenKeyExW: различные типы для формального и фактического параметров 3
+C:\Users\Dimochka\Desktop\Project\0_CountLaunches_0.5\main.c(32,11): warning C4047: return: "int" отличается по уровням косвенного обращения от "HKEY"
+C:\Users\Dimochka\Desktop\Project\0_CountLaunches_0.5\main.c(37,1): warning C4047: инициализация: "char" отличается по уровням косвенного обращения от "void *"
+C:\Users\Dimochka\Desktop\Project\0_CountLaunches_0.5\main.c(47,29): warning C4047: функция: "DWORD" отличается по уровням косвенного обращения от "void *"
+C:\Users\Dimochka\Desktop\Project\0_CountLaunches_0.5\main.c(47,25): warning C4024: RegSetValueExW: различные типы для формального и фактического параметров 3
+C:\Users\Dimochka\Desktop\Project\0_CountLaunches_0.5\main.c(45,1): warning C4047: инициализация: "char" отличается по уровням косвенного обращения от "void *"
+C:\Users\Dimochka\Desktop\Project\0_CountLaunches_0.5\main.c(55,21): warning C4047: =: "HKEY" отличается по уровням косвенного обращения от "int"
+C:\Users\Dimochka\Desktop\Project\0_CountLaunches_0.5\main.c(56,12): warning C4047: ==: "HKEY" отличается по уровням косвенного обращения от "int"
+C:\Users\Dimochka\Desktop\Project\0_CountLaunches_0.5\main.c(63,19): warning C4047: =: "HKEY" отличается по уровням косвенного обращения от "int"
+C:\Users\Dimochka\Desktop\Project\0_CountLaunches_0.5\main.c(67,20): warning C4047: =: "HKEY" отличается по уровням косвенного обращения от "int"
+C:\Users\Dimochka\Desktop\Project\0_CountLaunches_0.5\main.c(54,1): warning C4047: инициализация: "int" отличается по уровням косвенного обращения от "void *"
+C:\Users\Dimochka\Desktop\Project\0_CountLaunches_0.5\main.c(49): warning C4716: SetValue: должна возвращать значение
+  0_CountLaunches_0.5.vcxproj -> C:\Users\Dimochka\Desktop\Project\0_CountLaunches_0.5\Debug\0_CountLaunches_0.5.exe

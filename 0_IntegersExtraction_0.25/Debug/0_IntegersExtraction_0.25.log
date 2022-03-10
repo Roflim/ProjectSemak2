@@ -1,0 +1,3 @@
+﻿  main.c
+C:\Users\Dimochka\Desktop\Project\0_IntegersExtraction_0.25\main.c(21,11): warning C4477: "printf_s": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "int"
+  0_IntegersExtraction_0.25.vcxproj -> C:\Users\Dimochka\Desktop\Project\0_IntegersExtraction_0.25\Debug\0_IntegersExtraction_0.25.exe
