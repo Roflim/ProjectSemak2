@@ -1,30 +1,53 @@
 #include <stdlib.h>
+#include <stdio.h>
 
-#define MaxSize 100
+struct BigInt { int* Mass; int CountMass; };
 
-int SumInt(int* FirstMass, int* SeconMass) {
-	int FirstCountMass = 0, SeconCountMass = 0, tmp = 0;
-	for (int i = 0; FirstMass[i] != '\0'; ++i) ++FirstCountMass;
-	for (int i = 0; SeconMass[i] != '\0'; ++i) ++SeconCountMass;
-	for (int i = (FirstCountMass - 1), j = (SeconCountMass - 1); i >= 0; --i, --j) {
-		tmp = FirstMass[i] + SeconMass[j] + tmp;
-		if (tmp > 10) {
-			tmp % 10			
+int SumInt(int* FirstMass, int* SeconMass, int FirstCountMass, int SeconCountMass) {
+	int tmp = 0, tmpSecon = 0;
+	for (int i = (FirstCountMass - 1), j = (SeconCountMass - 1); i >= 0; --i) {
+		if (j >= 0) { tmpSecon = SeconMass[j]; --j; }
+		else tmpSecon = 0;
+		tmp = FirstMass[i] + tmpSecon + tmp;
+		if (tmp >= 10) {
+			FirstMass[i] = tmp % 10;
+			tmp = tmp / 10;
 		}
 	}
 }
 
 
 int main() {
-	int FirstCountMass = 15, SeconCountMass = 2;
-	int* FirstMass = (int*)malloc(FirstCountMass * sizeof(int));
-	int* SeconMass = (int*)malloc(SeconCountMass * sizeof(int));
-	for (int i = 0; i < 14; ++i) {
+	struct BigInt First, Secon;
+	First.CountMass = 15; Secon.CountMass = 1;
+	int* FirstMass = (int*)malloc(First.CountMass * sizeof(int));
+	for (int i = 0; i < First.CountMass; ++i) {
+		FirstMass[i] = '\0';
+	}
+	int* SeconMass = (int*)malloc(First.CountMass * sizeof(int));
+	for (int i = 0; i < Secon.CountMass; ++i) {
+		SeconMass[i] = '\0';
+	}
+
+	for (int i = 0; i < First.CountMass; ++i) {
 		FirstMass[i] = 9;
 	}
-	FirstMass[14] = '\0';
 	SeconMass[0] = 1;
-	SeconMass[0] = '\0';
-
-
+	for (int i = 0; i < First.CountMass; ++i) {
+		printf("%d", FirstMass[i]);
+	}
+	printf("\n");
+	for (int i = 0; i < Secon.CountMass; ++i) {
+		printf("%d", SeconMass[i]);
+	}
+	printf("\n");
+	SumInt(FirstMass, SeconMass, First.CountMass, Secon.CountMass);
+	for (int i = 0; i < First.CountMass; ++i) {
+		printf("%d", FirstMass[i]);
+	}
+	printf("\n");
+	for (int i = 0; i < Secon.CountMass; ++i) {
+		printf("%d", SeconMass[i]);
+	}
+	printf("\n");
 }
