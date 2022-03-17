@@ -1,3 +1,4 @@
 ﻿  main.c
-C:\Users\Dimochka\Desktop\Project\0_BigIntegers_1\main.c(17): warning C4716: SumInt: должна возвращать значение
+C:\Users\Dimochka\Desktop\Project\0_BigIntegers_1\main.c(21,18): warning C4047: return: "int" отличается по уровням косвенного обращения от "int *"
+C:\Users\Dimochka\Desktop\Project\0_BigIntegers_1\main.c(50,79): warning C4047: =: "int *" отличается по уровням косвенного обращения от "int"
   0_BigIntegers_1.vcxproj -> C:\Users\Dimochka\Desktop\Project\0_BigIntegers_1\x64\Debug\0_BigIntegers_1.exe
