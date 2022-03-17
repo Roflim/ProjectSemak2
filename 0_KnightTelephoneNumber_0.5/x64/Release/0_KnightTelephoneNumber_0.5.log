@@ -1,16 +1,17 @@
 ﻿  main.c
 C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(6,10): warning C4244: return: преобразование "unsigned __int64" в "int", возможна потеря данных
-C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(36,11): warning C4244: return: преобразование "unsigned __int64" в "int", возможна потеря данных
-C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(78,10): warning C4244: return: преобразование "unsigned __int64" в "int", возможна потеря данных
-C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(80,9): warning C4244: return: преобразование "unsigned __int64" в "int", возможна потеря данных
-C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(86,10): warning C4477: "scanf_s": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "unsigned __int64 *"
-C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(86,10): message : рекомендуется использовать "%lld" в строке форматирования
-C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(86,10): message : рекомендуется использовать "%Id" в строке форматирования
-C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(86,10): message : рекомендуется использовать "%I64d" в строке форматирования
-C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(89,25): warning C4244: функция: преобразование "unsigned __int64" в "int", возможна потеря данных
-C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(93,8): warning C4013: system: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(27,11): warning C4244: return: преобразование "unsigned __int64" в "int", возможна потеря данных
+C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(58,10): warning C4244: return: преобразование "unsigned __int64" в "int", возможна потеря данных
+C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(60,9): warning C4244: return: преобразование "unsigned __int64" в "int", возможна потеря данных
+C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(66,10): warning C4477: "scanf_s": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "unsigned __int64 *"
+C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(66,10): message : рекомендуется использовать "%lld" в строке форматирования
+C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(66,10): message : рекомендуется использовать "%Id" в строке форматирования
+C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(66,10): message : рекомендуется использовать "%I64d" в строке форматирования
+C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(69,25): warning C4244: функция: преобразование "unsigned __int64" в "int", возможна потеря данных
+C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(73,8): warning C4013: system: нет определения; предполагается "extern" с возвратом типа "int"
   Создание кода
-  Previous IPDB not found, fall back to full compilation.
-  All 8 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  0 of 8 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   0_KnightTelephoneNumber_0.5.vcxproj -> C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\x64\Release\0_KnightTelephoneNumber_0.5.exe
