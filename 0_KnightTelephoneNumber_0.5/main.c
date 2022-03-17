@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int TelefonHorses(int Num, int count, int Numbers, int A) {
+int TelefonHorses(int Num, long long unsigned int count, int Numbers, int A) {
 	if (A >= Num) {
 		--Num;
 		return count;
@@ -81,14 +81,14 @@ int TelefonHorses(int Num, int count, int Numbers, int A) {
 }
 
 int main() {
-	int Num = 0, count = 0, countHorses = 0;
+	long long unsigned int Num = 0, count = 0, countHorses = 0;
 	printf_s("Enter number.\n");
 	scanf_s("%d", &Num);
-	for (int i = 1; i <= 9; ++i) {
+	for (int i = 0; i <= 9; ++i) {
 		count = 0;
 		count = TelefonHorses(Num, count, i, 0);
 		countHorses += count;
 	}
-	printf_s("%d\n", countHorses);
+	printf_s("%llu\n", countHorses);
 	system("pause");
 }

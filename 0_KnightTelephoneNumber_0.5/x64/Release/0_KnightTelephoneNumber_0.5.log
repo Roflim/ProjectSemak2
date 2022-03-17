@@ -9,4 +9,8 @@ C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(86,10): mes
 C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(86,10): message : рекомендуется использовать "%I64d" в строке форматирования
 C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(89,25): warning C4244: функция: преобразование "unsigned __int64" в "int", возможна потеря данных
 C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\main.c(93,8): warning C4013: system: нет определения; предполагается "extern" с возвратом типа "int"
-  0_KnightTelephoneNumber_0.5.vcxproj -> C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\x64\Debug\0_KnightTelephoneNumber_0.5.exe
+  Создание кода
+  Previous IPDB not found, fall back to full compilation.
+  All 8 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  0_KnightTelephoneNumber_0.5.vcxproj -> C:\Users\Dimochka\Desktop\Project\0_KnightTelephoneNumber_0.5\x64\Release\0_KnightTelephoneNumber_0.5.exe
