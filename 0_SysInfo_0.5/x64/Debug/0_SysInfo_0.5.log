@@ -1,0 +1,20 @@
+﻿  main.c
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(40,79): warning C4047: функция: "DWORD" отличается по уровням косвенного обращения от "void *"
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(40,75): warning C4024: RegOpenKeyExW: различные типы для формального и фактического параметров 3
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(117,94): warning C4047: функция: "DWORD" отличается по уровням косвенного обращения от "void *"
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(117,90): warning C4024: RegOpenKeyExW: различные типы для формального и фактического параметров 3
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(133,9): warning C4477: "printf": в строке форматирования "%lx" требуется аргумент типа "unsigned long", но вариативный аргумент "1" имеет тип "LPVOID"
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(133,9): warning C4313: printf: конфликт "%x" в строке формата с аргументом 1 типа "LPVOID"
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(135,9): warning C4477: "printf": в строке форматирования "%lx" требуется аргумент типа "unsigned long", но вариативный аргумент "1" имеет тип "LPVOID"
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(135,9): warning C4313: printf: конфликт "%x" в строке формата с аргументом 1 типа "LPVOID"
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(137,9): warning C4477: "printf": в строке форматирования "%u" требуется аргумент типа "unsigned int", но вариативный аргумент "1" имеет тип "DWORD_PTR"
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(137,9): message : рекомендуется использовать "%llu" в строке форматирования
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(137,9): message : рекомендуется использовать "%Iu" в строке форматирования
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(137,9): message : рекомендуется использовать "%I64u" в строке форматирования
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(26,1): warning C4047: инициализация: "char" отличается по уровням косвенного обращения от "void *"
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(27,1): warning C4047: инициализация: "char" отличается по уровням косвенного обращения от "void *"
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(28,1): warning C4047: инициализация: "char" отличается по уровням косвенного обращения от "void *"
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(29,1): warning C4047: инициализация: "char" отличается по уровням косвенного обращения от "void *"
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(116,1): warning C4047: инициализация: "char" отличается по уровням косвенного обращения от "void *"
+C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\main.c(21): warning C4716: PrintInfo: должна возвращать значение
+  0_SysInfo_0.5.vcxproj -> C:\Users\Dimochka\Desktop\Project\0_SysInfo_0.5\x64\Debug\0_SysInfo_0.5.exe

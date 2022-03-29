@@ -1,4 +1,1 @@
-﻿  main.c
-C:\Users\Dimochka\Desktop\Project\0_IntegersExtraction_0.25\main.c(11,1): warning C4047: инициализация: "char" отличается по уровням косвенного обращения от "void *"
-C:\Users\Dimochka\Desktop\Project\0_IntegersExtraction_0.25\main.c(12,1): warning C4047: инициализация: "char" отличается по уровням косвенного обращения от "void *"
-  0_IntegersExtraction_0.25.vcxproj -> C:\Users\Dimochka\Desktop\Project\0_IntegersExtraction_0.25\x64\Debug\0_IntegersExtraction_0.25.exe
+﻿  0_IntegersExtraction_0.25.vcxproj -> C:\Users\Dimochka\OneDrive - ФБГОУ ВПО Челябинский государственный университет\Рабочий стол\Project\0_IntegersExtraction_0.25\x64\Debug\0_IntegersExtraction_0.25.exe
