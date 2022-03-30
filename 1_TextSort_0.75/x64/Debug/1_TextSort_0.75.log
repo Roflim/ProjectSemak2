@@ -1,4 +1,4 @@
 ﻿  main.c
-C:\Users\Dimochka\OneDrive - ФБГОУ ВПО Челябинский государственный университет\Рабочий стол\Project\1_TextSort_0.75\main.c(12,1): warning C4047: инициализация: "fpos_t" отличается по уровням косвенного обращения от "void *"
-C:\Users\Dimochka\OneDrive - ФБГОУ ВПО Челябинский государственный университет\Рабочий стол\Project\1_TextSort_0.75\main.c(42,9): warning C4101: tmpString: неиспользованная локальная переменная
+C:\Users\Dimochka\OneDrive - ФБГОУ ВПО Челябинский государственный университет\Рабочий стол\Project\1_TextSort_0.75\main.c(18,26): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Dimochka\OneDrive - ФБГОУ ВПО Челябинский государственный университет\Рабочий стол\Project\1_TextSort_0.75\main.c(39,17): warning C4244: =: преобразование "wint_t" в "char", возможна потеря данных
   1_TextSort_0.75.vcxproj -> C:\Users\Dimochka\OneDrive - ФБГОУ ВПО Челябинский государственный университет\Рабочий стол\Project\1_TextSort_0.75\x64\Debug\1_TextSort_0.75.exe

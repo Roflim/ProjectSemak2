@@ -1,4 +1,2 @@
 ﻿  main.c
-C:\Users\Dimochka\OneDrive - ФБГОУ ВПО Челябинский государственный университет\Рабочий стол\Project\1_TextSort_0.75\main.c(24,17): warning C4244: =: преобразование "wint_t" в "char", возможна потеря данных
-C:\Users\Dimochka\OneDrive - ФБГОУ ВПО Челябинский государственный университет\Рабочий стол\Project\1_TextSort_0.75\main.c(16,1): warning C4047: инициализация: "fpos_t" отличается по уровням косвенного обращения от "void *"
   1_TextSort_0.75.vcxproj -> C:\Users\Dimochka\OneDrive - ФБГОУ ВПО Челябинский государственный университет\Рабочий стол\Project\1_TextSort_0.75\Debug\1_TextSort_0.75.exe

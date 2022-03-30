@@ -1,54 +1,77 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <locale.h>
+
+int compare(const void* val1, const void* val2) {
+	const char** tmpstr1 = (char**)val1;
+	const char** tmpstr2 = (char**)val2;
+
+	return((strlen(*tmpstr1)) - (strlen(*tmpstr2)));
+
+	/*if (strlen(*tmpstr1) > strlen(*tmpstr2))
+		return 1;
+	else if (strlen(*tmpstr1) == strlen(*tmpstr2))
+		return 0;
+	else if (strlen(*tmpstr1) < strlen(*tmpstr2))
+		return -1;*/
+
+}
 
 int main() {
 	setlocale(0, "Russian");
 	int counter = 0;
-	int NumCount = 0;
 	int NumString = 0;
+	int* tmpMassCount = NULL;
 	int* BookMassCount = NULL;
 	char input = '1';
-	char* tmpString = NULL;
-	char** tmpText = NULL;
 	char** BookMass = NULL;
 	FILE* Book = NULL;
-	fpos_t pos = NULL;
 
 	fopen_s(&Book, "book.txt", "r");
 	if (Book == NULL) {
 		perror("Fail");
+		system("pause");
+		return 0;
 	}
 
-	while (!feof(Book)){
-		input = fgetwc(Book);
-		if (input == '\n') ++counter;
+	while (!feof(Book)) {
+		input = fgetc(Book);
+		++NumString;
+		if (input == '\n') { 
+			++counter;
+			tmpMassCount = (int*)realloc(BookMassCount, (counter ) * sizeof(int));
+			BookMassCount = tmpMassCount;
+			BookMassCount[counter-1] = NumString;
+			NumString = 0;
+		}
 		else if (input == '\0') break;
 	}
 	rewind(Book);
 
-
-	do {
-		NumString = 0;
-		input = '1';
-		NumCount++;
-		fgetpos(Book, &pos);
-		for (; input != '\n'; ++NumString)
-			input = fgetc(Book);
-		fsetpos(Book, &pos);
-		tmpText = (char**)realloc(BookMass, NumCount * sizeof(char*));
-		if (tmpText != NULL) {
-			BookMass = tmpText;
-			BookMass[NumCount - 1] = (char*)malloc(NumString * sizeof(char));
-			for (int i = 0; i < NumString; ++i)
-				BookMass[NumCount - 1][i] = fgetc(Book);
+	BookMass = (char**)malloc((counter) * sizeof(char*));
+	for (int i = 0; i < counter; ++i) {
+		BookMass[i] = (char*)malloc(BookMassCount[i] * sizeof(char));
+		for (int j = 0; j < BookMassCount[i]; ++j) {
+			BookMass[i][j] = 0;
 		}
-		else {
-			for (int i = 0; i < NumCount; ++i)
-				free(BookMass[i]);
-			free(BookMass);
-		}
+	}
 
-	} while (NumCount<=counter);
+	for (int i = 0; i < counter; ++i) {
+		for (int j = 0; j < BookMassCount[i]; ++j) {
+			BookMass[i][j] = fgetc(Book);
+		}
+	}
+	
+	qsort(BookMass, (counter), sizeof(char*), compare);
+	
+	for (int i = 0; i < counter; ++i) {
+		for (int j = 0; BookMass[i][j]!='\n'; ++j) {
+			printf("%c", BookMass[i][j]);
+		}
+		printf("\n");
+	}
+
 	system("pause");
+	return 0;
 }
