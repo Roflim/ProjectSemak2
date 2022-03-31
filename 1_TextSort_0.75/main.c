@@ -6,16 +6,7 @@
 int compare(const void* val1, const void* val2) {
 	const char** tmpstr1 = (char**)val1;
 	const char** tmpstr2 = (char**)val2;
-
 	return((strlen(*tmpstr1)) - (strlen(*tmpstr2)));
-
-	/*if (strlen(*tmpstr1) > strlen(*tmpstr2))
-		return 1;
-	else if (strlen(*tmpstr1) == strlen(*tmpstr2))
-		return 0;
-	else if (strlen(*tmpstr1) < strlen(*tmpstr2))
-		return -1;*/
-
 }
 
 int main() {
@@ -41,9 +32,18 @@ int main() {
 		if (input == '\n') { 
 			++counter;
 			tmpMassCount = (int*)realloc(BookMassCount, (counter ) * sizeof(int));
-			BookMassCount = tmpMassCount;
-			BookMassCount[counter-1] = NumString;
-			NumString = 0;
+			if (tmpMassCount != NULL) {
+				BookMassCount = tmpMassCount;
+				BookMassCount[counter - 1] = NumString;
+				NumString = 0;
+			}
+			else {
+				free(BookMassCount);
+				free(tmpMassCount);
+				printf("Memory allocation error.\nCritical error.\n");
+				system("pause");
+				return 0;
+			}
 		}
 		else if (input == '\0') break;
 	}
@@ -63,6 +63,8 @@ int main() {
 		}
 	}
 	
+	fclose(Book);
+	free(BookMassCount);
 	qsort(BookMass, (counter), sizeof(char*), compare);
 	
 	for (int i = 0; i < counter; ++i) {
@@ -71,6 +73,12 @@ int main() {
 		}
 		printf("\n");
 	}
+
+	for (int i = 0; i < counter; ++i) {
+		free(BookMass[i]);
+	}
+	free(BookMass);
+	
 
 	system("pause");
 	return 0;
