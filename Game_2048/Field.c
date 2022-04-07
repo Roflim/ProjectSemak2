@@ -1,4 +1,5 @@
 #include "Field.h"
+#include "logic.h"
 
 int CreateMyField(int gameScore, int screenWidth, int screenHeight, int fieldExl) {
 	char strGameScore[5] = { 0 };
@@ -7,7 +8,8 @@ int CreateMyField(int gameScore, int screenWidth, int screenHeight, int fieldExl
 	ClearBackground((Color) { 255, 239, 181, 1 });
 
 	DrawText("2048", screenWidth / 70, screenHeight / 70, screenHeight / 10, BLACK);
-
+	DrawText("WASD - control", screenWidth / 70, screenHeight / 8, screenHeight / 25, BLACK);
+	DrawText("R - restart", screenWidth / 70, ((screenHeight / 12)*2), screenHeight / 25, BLACK);
 	DrawRectangleLines(
 		((screenWidth - fieldExl) / 2),
 		(screenHeight - (fieldExl + ((screenWidth - fieldExl) / 2))),
@@ -61,7 +63,7 @@ int CreateMyField(int gameScore, int screenWidth, int screenHeight, int fieldExl
 	EndDrawing();
 }
 
-int outMass(int** Mass, int screenWidth, int screenHeight, int fieldExl) {
+int outMass(int** Mass, int screenWidth, int screenHeight, int fieldExl, int score) {
 	char strGame[5] = { 0 };
 	for (int i = 0; i < 4; ++i) {
 		for (int j = 0; j < 4; ++j) {
@@ -72,7 +74,7 @@ int outMass(int** Mass, int screenWidth, int screenHeight, int fieldExl) {
 				strGame,
 				(((screenWidth - fieldExl) / 2)+(fieldExl/14)+((fieldExl/4)*j)),
 				((screenHeight - (fieldExl + ((screenWidth - fieldExl) / 2))+((fieldExl / 12) + ((fieldExl / 4) * i)))),
-				(fieldExl/20),
+				((fieldExl/8)-(5*(ScoreOnNum(score)))),
 				BLACK);
 		}
 	}
