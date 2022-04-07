@@ -68,17 +68,11 @@ int outMass(int** Mass, int screenWidth, int screenHeight, int fieldExl) {
 			int tmp = 0;
 			tmp = Mass[i][j];
 			_itoa_s(tmp, strGame, 5, 10);
-			DrawRectangle(
-				(((screenWidth - fieldExl) / 2) * i),
-				((screenHeight - (fieldExl + ((screenWidth - fieldExl) / 2))) * j),
-				(fieldExl / 4)-1,
-				(fieldExl / 4)-1,
-				(Color) {255, 191, 0, 1});
 			DrawText(
 				strGame,
-				(((screenWidth - fieldExl) / 2)* i),
-				((screenHeight - (fieldExl + ((screenWidth - fieldExl) / 2)))* j),
-				20,
+				(((screenWidth - fieldExl) / 2)+(fieldExl/14)+((fieldExl/4)*j)),
+				((screenHeight - (fieldExl + ((screenWidth - fieldExl) / 2))+((fieldExl / 12) + ((fieldExl / 4) * i)))),
+				(fieldExl/20),
 				BLACK);
 		}
 	}

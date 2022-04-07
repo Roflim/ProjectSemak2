@@ -19,22 +19,22 @@ int main() {
 		CreateMyField(gameScore, screenWidth, screenHeight, fieldExl);
 		if (IsKeyPressed(KEY_W)) {
 			DrawText("W", 100, 100, 50, BLACK);
-			shiftWASD(GameField, 1);
+			gameScore += shiftWASD(GameField, 1);
 			NewNumOnField(GameField, gameScore);
 		}
 		if (IsKeyPressed(KEY_A)) {
 			DrawText("A", 100, 100, 50, BLACK);
-			shiftWASD(GameField, 2);
+			gameScore += shiftWASD(GameField, 2);
 			NewNumOnField(GameField, gameScore);
 		}
 		if (IsKeyPressed(KEY_S)) {
 			DrawText("S", 100, 100, 50, BLACK);
-			shiftWASD(GameField, 3);
+			gameScore += shiftWASD(GameField, 3);
 			NewNumOnField(GameField, gameScore);
 		}
 		if (IsKeyPressed(KEY_D)) {
 			DrawText("D", 100, 100, 50, BLACK);
-			shiftWASD(GameField, 4);
+			gameScore += shiftWASD(GameField, 4);
 			NewNumOnField(GameField, gameScore);
 		}
 		outMass(GameField, screenWidth, screenHeight, fieldExl);
