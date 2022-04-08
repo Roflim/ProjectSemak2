@@ -9,7 +9,8 @@ int CreateMyField(int gameScore, int screenWidth, int screenHeight, int fieldExl
 
 	DrawText("2048", screenWidth / 70, screenHeight / 70, screenHeight / 10, BLACK);
 	DrawText("WASD - control", screenWidth / 70, screenHeight / 8, screenHeight / 25, BLACK);
-	DrawText("R - restart", screenWidth / 70, ((screenHeight / 12)*2), screenHeight / 25, BLACK);
+	DrawText("R - restart", screenWidth / 70, ((screenHeight / 12) * 2), screenHeight / 25, BLACK);
+	DrawText("Esc - EXIT", screenWidth / 70, ((screenHeight / 10)*2), screenHeight / 25, BLACK);
 	DrawRectangleLines(
 		((screenWidth - fieldExl) / 2),
 		(screenHeight - (fieldExl + ((screenWidth - fieldExl) / 2))),
@@ -50,7 +51,7 @@ int CreateMyField(int gameScore, int screenWidth, int screenHeight, int fieldExl
 
 	DrawText(
 		"SCORE",
-		((screenWidth / 3 * 2) + 35 % (screenWidth / 3 * 2)),
+		((screenWidth / 3 * 2) + 30 % (screenWidth / 3 * 2)),
 		((screenHeight / 70) + 10 % (screenWidth / 3 * 2)),
 		screenHeight / 40,
 		ORANGE);
@@ -69,13 +70,15 @@ int outMass(int** Mass, int screenWidth, int screenHeight, int fieldExl, int sco
 		for (int j = 0; j < 4; ++j) {
 			int tmp = 0;
 			tmp = Mass[i][j];
-			_itoa_s(tmp, strGame, 5, 10);
-			DrawText(
-				strGame,
-				(((screenWidth - fieldExl) / 2)+(fieldExl/14)+((fieldExl/4)*j)),
-				((screenHeight - (fieldExl + ((screenWidth - fieldExl) / 2))+((fieldExl / 12) + ((fieldExl / 4) * i)))),
-				((fieldExl/8)-(5*(ScoreOnNum(score)))),
-				BLACK);
+			if (tmp != 0) {
+				_itoa_s(tmp, strGame, 5, 10);
+				DrawText(
+					strGame,
+					(((screenWidth - fieldExl) / 2) + (fieldExl / 14) + ((fieldExl / 4) * j)),
+					((screenHeight - (fieldExl + ((screenWidth - fieldExl) / 2)) + ((fieldExl / 12) + ((fieldExl / 4) * i)))),
+					((fieldExl / 8) - (5 * (ScoreOnNum(score)))),
+					BLACK);
+			}
 		}
 	}
 }

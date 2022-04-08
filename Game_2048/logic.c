@@ -45,7 +45,22 @@ int NewNumOnField(int** GameField, int score) {
 				counter++;
 		}
 	}//счет свободных мест
-
+	if (counter == 0) {
+		tmpNum1 = 1;
+		for (int i = 0; i < sizeMass; ++i) {
+			for (int j = 0; j < (sizeMass-1); ++j) {
+				if (GameField[i][j] == GameField[i][j + 1])
+					tmpNum1 = 0;
+			}
+		}
+		for (int j = 0; j < sizeMass; ++j) {
+			for (int i = 0; i < (sizeMass - 1); ++i) {
+				if (GameField[i][j] == GameField[i+1][j])
+					tmpNum1 = 0;
+			}
+		}
+		return (tmpNum1);
+	}
 	if (counter > 9) {
 		do {
 			tmpNum1 = GetRandomValue(0, sizeMass - 1);
@@ -87,8 +102,6 @@ int shiftWASD(int** gameMass, int tmp) {
 				for (int i = 0; i < (sizeMass - 1); ++i) {
 					if (gameMass[i][j] == 0 && gameMass[i + 1][j] != 0) {
 						tmpNum1 = 1;
-					}
-					if (gameMass[i][j] == 0 && gameMass[i + 1][j] != 0) {
 						gameMass[i][j] = gameMass[i + 1][j];
 						gameMass[i + 1][j] = 0;
 					}
@@ -115,8 +128,6 @@ int shiftWASD(int** gameMass, int tmp) {
 				for (int j = 0; j < (sizeMass - 1); ++j) {
 					if (gameMass[i][j] == 0 && gameMass[i][j + 1] != 0) {
 						tmpNum1 = 1;
-					}
-					if (gameMass[i][j] == 0 && gameMass[i][j + 1] != 0) {
 						gameMass[i][j] = gameMass[i][j + 1];
 						gameMass[i][j + 1] = 0;
 					}
@@ -144,8 +155,6 @@ int shiftWASD(int** gameMass, int tmp) {
 				for (int i = (sizeMass - 1); i > 0; --i) {
 					if (gameMass[i][j] == 0 && gameMass[i - 1][j] != 0) {
 						tmpNum1 = 1;
-					}
-					if (gameMass[i][j] == 0 && gameMass[i - 1][j] != 0) {
 						gameMass[i][j] = gameMass[i - 1][j];
 						gameMass[i - 1][j] = 0;
 					}
@@ -172,8 +181,6 @@ int shiftWASD(int** gameMass, int tmp) {
 				for (int j = (sizeMass - 1); j > 0; --j) {
 					if (gameMass[i][j] == 0 && gameMass[i][j - 1] != 0) {
 						tmpNum1 = 1;
-					}
-					if (gameMass[i][j] == 0 && gameMass[i][j - 1] != 0) {
 						gameMass[i][j] = gameMass[i][j - 1];
 						gameMass[i][j - 1] = 0;
 					}
