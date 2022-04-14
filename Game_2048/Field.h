@@ -1,6 +1,6 @@
+#include <stdlib.h>
 #include <raylib.h>
 #include <string.h>
-#include <stdlib.h>
 
 #define scrWidt 600;
 #define scrHeig 800;

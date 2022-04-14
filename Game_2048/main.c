@@ -1,5 +1,6 @@
 #include "Field.h"
 #include "logic.h"
+//#include <minwindef.h>
 
 
 int main() {
@@ -26,19 +27,19 @@ int main() {
 			GameField = GameMass(gameScore);
 		}
 		CreateMyField(gameScore, screenWidth, screenHeight, fieldExl);
-		if (IsKeyPressed(KEY_W)) {
+		if (IsKeyPressed(KEY_UP)) {
 			gameScore += shiftWASD(GameField, 1);
 			gameOver = NewNumOnField(GameField, gameScore);
 		}
-		if (IsKeyPressed(KEY_A)) {
+		if (IsKeyPressed(KEY_LEFT)) {
 			gameScore += shiftWASD(GameField, 2);
 			gameOver = NewNumOnField(GameField, gameScore);
 		}
-		if (IsKeyPressed(KEY_S)) {
+		if (IsKeyPressed(KEY_DOWN)) {
 			gameScore += shiftWASD(GameField, 3);
 			gameOver = NewNumOnField(GameField, gameScore);
 		}
-		if (IsKeyPressed(KEY_D)) {
+		if (IsKeyPressed(KEY_RIGHT)) {
 			gameScore += shiftWASD(GameField, 4);
 			gameOver = NewNumOnField(GameField, gameScore);
 		}
