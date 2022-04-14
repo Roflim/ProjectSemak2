@@ -1,19 +1,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include "raylib.h"
-#include "md5.h"
 
 #define MAX_INPUT_CHARS     30
-
-
-uint8_t* HashMd5(char* name) {
-	uint8_t* result = 0;
-	result = md5String(name);
-	for (int i = 0; i < 16; ++i) {
-		printf("%x", result[i]);
-	}
-	return (result);
-}
 
 int HashCount(char* name) {
 	const int k = 31, mod = 1e9 + 7;
@@ -40,10 +29,10 @@ int main(void) {
 	bool mouseOnText = false;
 
 	int framesCounter = 0;
-	uint8_t* HASH = 0;
+	long long HASH = 0;
 	char HashChar[100] = { 0 };
 
-	SetTargetFPS(10);
+	SetTargetFPS(30);
 	while (!WindowShouldClose()) {
 		if (CheckCollisionPointRec(GetMousePosition(), textBox)) mouseOnText = true;
 		else mouseOnText = false;
