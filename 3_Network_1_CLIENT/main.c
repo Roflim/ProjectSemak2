@@ -1,4 +1,4 @@
-//  client
+// client
 #include <zmq.h>
 #include <string.h>
 #include <stdio.h>
